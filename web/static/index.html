@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#cb11ab" />
+    <meta name="description" content="StyleShop. Каталог одежды." />
+    <title>StyleShop / Магазин одежды</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" />
+    <link rel="stylesheet" href="/style.css" /><link rel="stylesheet" href="/styleshop.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#catalog">Перейти к каталогу</a>
+    <header class="header">
+      <nav aria-label="Основная навигация" class="nav-left">
+        <button class="nav-link" data-action="catalog">Каталог</button>
+      </nav>
+      <a class="header-mark" href="/" aria-label="StyleShop, главная">StyleShop</a>
+      <nav aria-label="Аккаунт" class="nav-right" id="account-nav"></nav>
+    </header>
+    <main id="main">
+      <div id="store-view">
+        <section class="intro" aria-label="Новая коллекция StyleShop"><h1>Новая коллекция</h1><p>Одежда для вашего ритма. Найдите свой стиль в StyleShop.</p></section>
+        <section id="catalog" class="catalog" aria-labelledby="catalog-title">
+          <div class="catalog-heading">
+            <h2 id="catalog-title">Каталог</h2>
+            <span id="catalog-count" class="mono" aria-live="polite"></span>
+          </div>
+          <form
+            id="filters"
+            class="filters uniform-filters"
+            aria-label="Фильтры каталога"
+          >
+            <label class="search"
+              ><span class="sr-only">Поиск</span
+              ><input
+                name="q"
+                placeholder="Искать товары, бренды, категории…"
+                type="search"
+                maxlength="100"
+            /></label>
+            <details class="filter-dropdown" data-filter="type">
+              <summary>Тип<span class="filter-selected" hidden></span></summary>
+              <div class="filter-panel">
+                <fieldset data-filter-options="type">
+                  <legend class="sr-only">Тип</legend>
+                </fieldset>
+                <button
+                  type="button"
+                  class="text-button filter-clear"
+                  data-action="clear-filter"
+                  data-key="type"
+                >
+                  Очистить
+                </button>
+              </div>
+            </details>
+            <details class="filter-dropdown" data-filter="size">
+              <summary>
+                Размер<span class="filter-selected" hidden></span>
+              </summary>
+              <div class="filter-panel">
+                <fieldset data-filter-options="size">
+                  <legend class="sr-only">Размер</legend>
+                </fieldset>
+                <button
+                  type="button"
+                  class="text-button filter-clear"
+                  data-action="clear-filter"
+                  data-key="size"
+                >
+                  Очистить
+                </button>
+              </div>
+            </details>
+            <details class="filter-dropdown" data-filter="color">
+              <summary>
+                Цвет<span class="filter-selected" hidden></span>
+              </summary>
+              <div class="filter-panel">
+                <fieldset data-filter-options="color">
+                  <legend class="sr-only">Цвет</legend>
+                </fieldset>
+                <button
+                  type="button"
+                  class="text-button filter-clear"
+                  data-action="clear-filter"
+                  data-key="color"
+                >
+                  Очистить
+                </button>
+              </div>
+            </details>
+            <details class="filter-dropdown" data-filter="brand">
+              <summary>
+                Бренд<span class="filter-selected" hidden></span>
+              </summary>
+              <div class="filter-panel">
+                <fieldset data-filter-options="brand">
+                  <legend class="sr-only">Бренд</legend>
+                </fieldset>
+                <button
+                  type="button"
+                  class="text-button filter-clear"
+                  data-action="clear-filter"
+                  data-key="brand"
+                >
+                  Очистить
+                </button>
+              </div>
+            </details>
+            <details class="filter-dropdown" data-filter="gender">
+              <summary>Пол<span class="filter-selected" hidden></span></summary>
+              <div class="filter-panel">
+                <fieldset data-filter-options="gender">
+                  <legend class="sr-only">Пол</legend>
+                </fieldset>
+                <button
+                  type="button"
+                  class="text-button filter-clear"
+                  data-action="clear-filter"
+                  data-key="gender"
+                >
+                  Очистить
+                </button>
+              </div>
+            </details>
+            <details class="filter-dropdown" data-filter="season">
+              <summary>
+                Сезон<span class="filter-selected" hidden></span>
+              </summary>
+              <div class="filter-panel">
+                <fieldset data-filter-options="season">
+                  <legend class="sr-only">Сезон</legend>
+                </fieldset>
+                <button
+                  type="button"
+                  class="text-button filter-clear"
+                  data-action="clear-filter"
+                  data-key="season"
+                >
+                  Очистить
+                </button>
+              </div>
+            </details>
+            <label class="sort-filter"
+              ><span class="sr-only">Сортировка</span
+              ><select name="sort">
+                <option value="">Сортировка</option>
+                <option value="price_asc">Сначала дешевле</option>
+                <option value="price_desc">Сначала дороже</option>
+              </select></label
+            ><button
+              type="button"
+              class="text-button reset-top"
+              data-action="reset-filters"
+            >
+              Сбросить фильтры
+            </button>
+          </form>
+          <div id="products" class="products" aria-live="polite">
+            <p class="empty">Загружаем коллекцию…</p>
+          </div>
+        </section>
+      </div>
+      <section
+        id="workspace-view"
+        class="workspace"
+        hidden
+        aria-labelledby="workspace-title"
+      >
+        <div class="workspace-heading">
+          <h1 id="workspace-title">Заказы</h1>
+          <button class="text-button" data-action="catalog">
+            Вернуться в каталог ↗
+          </button>
+        </div>
+        <nav
+          id="workspace-nav"
+          class="workspace-nav"
+          aria-label="Управление"
+        ></nav>
+        <div id="workspace-content"></div>
+      </section>
+    </main>
+    <footer>
+      <a class="footer-mark" href="/">StyleShop</a>
+      <p>© StyleShop, 2026</p>
+      <details class="privacy-policy" id="privacy-policy">
+        <summary>Политика конфиденциальности</summary>
+        <div id="privacy-text">
+          <p>В учебном магазине имя, электронная почта и телефон используются для работы аккаунта и оформления заказов. Пароли хранятся в виде хешей. Данные заказов доступны покупателю и сотрудникам магазина. Онлайн-оплата не подключена. Для удаления аккаунта обратитесь к администратору через учебную демонстрацию.</p>
+        </div>
+      </details>
+    </footer>
+    <dialog id="modal" aria-labelledby="modal-title">
+      <div id="modal-content"></div>
+    </dialog>
+    <dialog
+      id="privacy-modal"
+      class="compact"
+      aria-labelledby="privacy-title"
+    ></dialog>
+    <div id="toast" class="toast" popover="manual" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>

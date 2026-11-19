@@ -1,0 +1,1 @@
+ALTER TABLE products ADD COLUMN attributes TEXT NOT NULL DEFAULT '{}';

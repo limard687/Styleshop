@@ -1,0 +1,4 @@
+ALTER TABLE orders ADD COLUMN cancellation_reason TEXT NOT NULL DEFAULT '';
+ALTER TABLE orders ADD COLUMN cancellation_actor TEXT NOT NULL DEFAULT '';
+ALTER TABLE orders ADD COLUMN cancelled_by TEXT NOT NULL DEFAULT '';
+ALTER TABLE orders ADD COLUMN cancelled_at TEXT NOT NULL DEFAULT '';

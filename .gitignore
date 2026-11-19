@@ -1,0 +1,7 @@
+.env
+/data/
+/uploads/
+/bin/
+/output/
+.DS_Store
+*.log

@@ -1,0 +1,124 @@
+{
+  "products": [
+    {
+      "id": "99829b56-e5db-4a5d-82df-cf66a67897ed",
+      "name": "Куртка",
+      "type": "Кожаные",
+      "gender": "мужской",
+      "size": "M",
+      "color": "Черный",
+      "description": "Модная куртка, гуляй-гуляй...",
+      "brand": "Nikke",
+      "season": "Осень",
+      "price": 1450.0,
+      "stock": 13
+    },
+    {
+      "id": "e87072c3-6590-45e9-9586-9f9e852227c9",
+      "name": "Джинсы",
+      "type": "Утепленные",
+      "gender": "мужской",
+      "size": "XL",
+      "color": "Синий",
+      "description": "Утепленные зимние джинсы",
+      "brand": "Boss",
+      "season": "Зима",
+      "price": 2250.0,
+      "stock": 7
+    },
+    {
+      "id": "624e853c-5138-48c0-9048-c68c25a49808",
+      "name": "Футболка белая классическая",
+      "type": "футболка",
+      "gender": "мужской",
+      "size": "L",
+      "color": "белый",
+      "description": "Классная белая футболка",
+      "brand": "Uniqlo",
+      "season": "всесезон",
+      "price": 1590.0,
+      "stock": 10
+    },
+    {
+      "id": "ba32c09d-a6dc-48ef-a4a3-55c1bb5be374",
+      "name": "Рубашка оверсайз в клетку",
+      "type": "рубашка",
+      "gender": "унисекс",
+      "size": "L",
+      "color": "серый",
+      "description": "Обычная стильная рубашка",
+      "brand": "Zara",
+      "season": "осень",
+      "price": 3990.0,
+      "stock": 4
+    },
+    {
+      "id": "af61d004-c98a-4fda-9aa8-e6a1b7463850",
+      "name": "Брюки классические со стрелками",
+      "type": "брюки",
+      "gender": "женский",
+      "size": "M",
+      "color": "чёрный",
+      "description": "Стандартный тип брюк",
+      "brand": "Baon",
+      "season": "всесезон",
+      "price": 4590.0,
+      "stock": 7
+    },
+    {
+      "id": "696118d5-8182-4156-8ad5-77003851d3ab",
+      "name": "Платье миди в цветочный принт",
+      "type": "платье",
+      "gender": "женский",
+      "size": "S",
+      "color": "многоцветный",
+      "description": "Стильное платье для повседневного использования",
+      "brand": "Zarina",
+      "season": "лето",
+      "price": 5490.0,
+      "stock": 13
+    }
+  ],
+  "photos": [
+    {
+      "id": "996fa09e-04a0-416b-9f34-574075266985",
+      "filename": "4744a987-a50e-4618-9536-7d3c6b867595.webp",
+      "product_id": "e87072c3-6590-45e9-9586-9f9e852227c9"
+    },
+    {
+      "id": "1ffabf4c-70d9-406a-a5d9-f82ab46836b9",
+      "filename": "4679ff4a-db49-4726-be04-62e4b0284a51.webp",
+      "product_id": "99829b56-e5db-4a5d-82df-cf66a67897ed"
+    },
+    {
+      "id": "a3d1330c-be5c-48d9-97ca-f5a9c09f1769",
+      "filename": "84c5d33c-6e9d-4287-a234-cd6fbb211ece.webp",
+      "product_id": "e87072c3-6590-45e9-9586-9f9e852227c9"
+    },
+    {
+      "id": "4649cf07-2753-4593-9f4c-1b4be71cd6d4",
+      "filename": "bc9f4941-828e-43c7-8bcb-7042b96293e9.webp",
+      "product_id": "e87072c3-6590-45e9-9586-9f9e852227c9"
+    },
+    {
+      "id": "217898f6-6bdd-49f0-8fc2-3b0d9908b478",
+      "filename": "2b4e9455-c6c9-4a8d-a1eb-0c297c41a83e.jpg",
+      "product_id": "624e853c-5138-48c0-9048-c68c25a49808"
+    },
+    {
+      "id": "531257eb-cb4a-404f-b25d-71787bbb678c",
+      "filename": "5b4ed9bb-f78b-48dc-b257-c93f47b17bbb.webp",
+      "product_id": "ba32c09d-a6dc-48ef-a4a3-55c1bb5be374"
+    },
+    {
+      "id": "b19cca04-1244-4ebb-83af-974fbdf3c835",
+      "filename": "ead8ddbc-6310-4aca-943c-c601cee880c8.webp",
+      "product_id": "af61d004-c98a-4fda-9aa8-e6a1b7463850"
+    },
+    {
+      "id": "f88acac5-aa46-4156-b7d4-654a77808520",
+      "filename": "ff7978a8-2636-45b4-bcb4-4e0d6aedef89.webp",
+      "product_id": "696118d5-8182-4156-8ad5-77003851d3ab"
+    }
+  ]
+}
